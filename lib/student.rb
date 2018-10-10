@@ -16,8 +16,6 @@ class Student
   end
 
   def test_scores
-    puts @tests[0]
-    # puts @tests[1]
     @tests
       .group_by(&:pretty_date_taken)
       .map {|date, tests| [date, tests.map(&:score)] }
